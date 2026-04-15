@@ -21,7 +21,7 @@ else:
     print("Eres menor de edad, vuelve a casa.")
 ```
 
-## 2. Los Bucles: For y While 🔄
+## 2. Los Bucles: For y While 
 Los bucles sirven para repetir una tarea muchas veces sin tener que escribir el mismo código una y otra vez. ¡Nos ahorran muchísimo trabajo y evitan errores!
 
 Bucle for: Lo usamos cuando sabemos cuántas veces queremos repetir algo o para recorrer una lista de elementos.
@@ -30,7 +30,7 @@ Bucle while: Se repite mientras una condición sea verdadera. Hay que tener cuid
 
 ¿Por qué son útiles? Porque si tienes que imprimir 100 nombres, con un bucle lo haces en 2 líneas en lugar de 100.
 
-## 3. Listas por Comprensión 📝
+## 3. Listas por Comprensión 
 Esto me pareció un lío al principio, pero en verdad es solo un "truco" para crear listas nuevas a partir de otras en una sola línea. Es mucho más limpio y elegante.
 
 **Ejemplo comparativo:**
@@ -65,7 +65,7 @@ Las funciones Lambda son como "funciones de bolsillo". Son anónimas (no tienen 
 
 Se usan para tareas muy sencillas y rápidas. Cuando no quieres crear una función completa con def porque solo vas a usar esa lógica una vez, usas una lambda.
 
-## 6. ¿Qué es un paquete PIP? 📦
+## 6. ¿Qué es un paquete PIP? 
 PIP es el gestor de paquetes de Python. Imagina que es como una "App Store" para programadores.
 
 ¿Para qué sirve? Para instalar librerías o herramientas que otros desarrolladores ya han creado (como para manejar bases de datos o crear gráficos). Solo tienes que escribir pip install nombre_del_paquete y ya puedes usarlo sin tener que inventar tú la rueda.
