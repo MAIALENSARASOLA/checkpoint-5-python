@@ -1,129 +1,111 @@
-# Checkpoint 5 - Introducción a Python
+# Mi Documentación de Python - Checkpoint 5
 
-## 1. ¿Qué es un condicional?
+Hola! Soy Maialen. He preparado esta documentación para explicar los conceptos básicos de Python que hemos visto en este módulo. Mi idea es que sea una guía sencilla para cualquier persona que esté empezando en el equipo. Espero que os ayude!
 
-Un condicional es una estructura que permite que un programa tome decisiones.
+---
 
-### ¿Para qué sirve?
-Un condicional se usa para que el programa haga una cosa u otra según se cumpla una condición.
+## 1. ¿Qué es un condicional? 
+Un condicional es como un semáforo en el código. Permite que el programa tome decisiones: "Si pasa esto, haz aquello; si no, haz esto otro".
 
-### Sintaxis
+* **¿Para qué sirve?** Para que el programa no sea siempre lineal y pueda reaccionar a diferentes situaciones (por ejemplo, dejar pasar a un usuario solo si su edad es correcta).
+* **Sintaxis:** Usamos `if`, `elif` y `else`.
+
+**Ejemplo:**
+
 ```python
-if condicion:
-    # código
-elif otra_condicion:
-    # código
-else:
-    # código
-Ejemplo
-
 edad = 20
 
 if edad >= 18:
-    print("Eres mayor de edad")
+    print("Eres mayor de edad, puedes pasar.")
 else:
-    print("Eres menor de edad")
+    print("Eres menor de edad, vuelve a casa.")
+```
 
-Explicación sencilla
+## 2. Los Bucles: For y While 🔄
+Los bucles sirven para repetir una tarea muchas veces sin tener que escribir el mismo código una y otra vez. ¡Nos ahorran muchísimo trabajo y evitan errores!
 
-Python comprueba si la condición es verdadera. Si lo es, ejecuta un bloque de código, si no, ejecuta otro. Al principio este tema puede parecer muy básico, pero ayuda mucho para entender cómo toma decisiones un programa.
+Bucle for: Lo usamos cuando sabemos cuántas veces queremos repetir algo o para recorrer una lista de elementos.
 
-2. ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
+Bucle while: Se repite mientras una condición sea verdadera. Hay que tener cuidado para que no se quede infinito.
 
-Los principales bucles en Python son for y while.
+¿Por qué son útiles? Porque si tienes que imprimir 100 nombres, con un bucle lo haces en 2 líneas en lugar de 100.
 
-¿Para qué sirven?
+## 3. Listas por Comprensión 📝
+Esto me pareció un lío al principio, pero en verdad es solo un "truco" para crear listas nuevas a partir de otras en una sola línea. Es mucho más limpio y elegante.
 
-Al principio me costó diferenciar for y while, sirven para repetir acciones sin tener que escribir el mismo código muchas veces.
+**Ejemplo comparativo:**
 
-Sintaxis
-for variable in secuencia:
-    # código
-while condicion:
-    # código
-Ejemplo
-for numero in range(5):
-    print(numero)
-contador = 0
+```Python
+numeros = [1, 2, 3]
 
-while contador < 5:
-    print(contador)
-    contador += 1
-Explicación sencilla
+# Forma normal con bucle
+dobles = []
+for n in numeros:
+    dobles.append(n * 2)
 
-El bucle for se usa cuando sabemos cuántas veces repetir algo. El while se usa mientras una condición sea verdadera. A mí esta parte al principio me costó un poco más, sobre todo diferenciar cuándo usar `for` y cuándo usar `while`.
+print(dobles)
+```
 
-3. ¿Qué es una lista por comprensión en Python?
+```python
+numeros = [1, 2, 3]
 
-Es una forma rápida de crear listas en una sola línea.
+# Con lista por comprensión
+dobles = [n * 2 for n in numeros]
 
-¿Para qué sirve?
+print(dobles)
+```
 
-Sirve para crear listas de forma más sencilla y rápida.
+## 4. ¿Qué es un argumento? 
+Un argumento es el "dato" o la información que le pasamos a una función para que pueda hacer su trabajo.
 
-Sintaxis
-[nuevo_elemento for elemento in secuencia]
-Ejemplo
-numeros = [1, 2, 3, 4, 5]
-cuadrados = [x**2 for x in numeros]
+Piensa en una función que suma números: los números que le das son los argumentos. Si no le das los datos, la función no tiene nada con lo que operar. Es la "materia prima" de nuestras funciones.
 
-print(cuadrados)
-Explicación sencilla
+## 5. ¿Qué es una función lambda? 
+Las funciones Lambda son como "funciones de bolsillo". Son anónimas (no tienen nombre) y se escriben en una sola línea de código.
 
-Se crea una nueva lista usando otra lista y aplicando una operación a cada elemento.
+Se usan para tareas muy sencillas y rápidas. Cuando no quieres crear una función completa con def porque solo vas a usar esa lógica una vez, usas una lambda.
 
-4. ¿Qué es un argumento en Python?
+## 6. ¿Qué es un paquete PIP? 📦
+PIP es el gestor de paquetes de Python. Imagina que es como una "App Store" para programadores.
 
-Un argumento es un valor que se pasa a una función.
+¿Para qué sirve? Para instalar librerías o herramientas que otros desarrolladores ya han creado (como para manejar bases de datos o crear gráficos). Solo tienes que escribir pip install nombre_del_paquete y ya puedes usarlo sin tener que inventar tú la rueda.
 
-¿Para qué sirve?
+## 7. Ejercicios prácticos
+A continuación, presento la resolución de los ejercicios prácticos solicitados:
 
-Sirve para que la función trabaje con diferentes datos.
+### 1. Bucle `for`
 
-Sintaxis
-funcion(argumento)
-Ejemplo
-def saludar(nombre):
-    print("Hola " + nombre)
+```python
+for i in range(5):
+    print(f"Estamos en el paso número {i}")
+```
 
-saludar("Maialen")
-Explicación sencilla
+### 2. Función suma con 3 argumentos
 
-"Maialen" es el valor que se le pasa a la función para que la use.
+```python
+def mi_suma(a, b, c):
+    return a + b + c
 
-5. ¿Qué es una función lambda en Python?
+resultado = mi_suma(10, 5, 2)
+print("El resultado de mi suma es:", resultado)
+```
 
-Es una función pequeña sin nombre.
+### 3. Función lambda equivalente
 
-¿Para qué sirve?
+```python
+suma_rapida = lambda a, b, c: a + b + c
+print("Suma con lambda:", suma_rapida(10, 5, 2))
+```
 
-Sirve para hacer operaciones simples en una sola línea.
+### 4. Comprobación de nombre en lista
 
-Sintaxis
-lambda argumentos: expresion
-Ejemplo
-suma = lambda a, b: a + b
-print(suma(2, 3))
-Explicación sencilla
+```python
+nombre_buscado = "Enrique"
+lista_nombres = ["Jessica", "Paul", "George", "Henry", "Adán"]
 
-Hace lo mismo que una función normal pero de forma más rápida y corta.
-
-6. ¿Qué es un paquete pip?
-
-pip es el gestor de paquetes de Python.
-
-¿Para qué sirve?
-
-Se usa para instalar librerías de Python que luego podemos utilizar en el código. 
-
-Sintaxis
-pip install nombre_paquete
-Ejemplo
-pip install requests
-Explicación sencilla
-
-Con pip puedes instalar herramientas ya hechas por otros desarrolladores.
-
-Conclusión
-
-En este trabajo se han explicado conceptos básicos de Python como los condicionales, los bucles, las listas por comprensión, los argumentos, las funciones lambda y el uso de pip.
+if nombre_buscado in lista_nombres:
+    print(f"¡Sí! {nombre_buscado} está en la lista.")
+else:
+    print(f"Vaya, parece que {nombre_buscado} no aparece por aquí.")
+```
+Documentación creada por Maialen Sarasola para el Checkpoint 5.
